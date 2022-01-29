@@ -1502,7 +1502,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &486941805
 GameObject:
@@ -1535,7 +1535,7 @@ Transform:
   - {fileID: 232403334}
   - {fileID: 111883650}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
 GameObject:
@@ -1620,7 +1620,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &519420033
 MonoBehaviour:
@@ -1815,7 +1815,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &576015626
 GameObject:
@@ -2320,6 +2320,7 @@ MonoBehaviour:
   basicEnemy: {fileID: 96547968456600900, guid: d73be6719fb8e68479939dced0b43127, type: 3}
   basicSniper: {fileID: 2374059598885380961, guid: d1a7e00e8df6007428775f2257ab8dd0, type: 3}
   basicBoss: {fileID: 96547968456600900, guid: 80f0bfa3a1cd9aa40b1ad59f62252174, type: 3}
+  gunnerBoss: {fileID: 96547968456600900, guid: 2a9d6ce1cb8ca494b9056a87b93e5222, type: 3}
 --- !u!4 &789410690
 Transform:
   m_ObjectHideFlags: 0
@@ -2343,7 +2344,7 @@ Transform:
   - {fileID: 836706421}
   - {fileID: 1604548073}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &806583910
 GameObject:
@@ -3307,7 +3308,7 @@ RectTransform:
   - {fileID: 294085075}
   - {fileID: 772884745}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3827,7 +3828,7 @@ Transform:
   - {fileID: 5575043705076239887}
   - {fileID: 269819558}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1692022637
 MonoBehaviour:
@@ -3841,7 +3842,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 308c0ee18eb23ac4ebae9fc8fe60ac15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSpeed: 4
+  playerSpeed: 2.7
   playerSpeedUpgrade: 0.1
   cameraFollow: {fileID: 519420033}
 --- !u!58 &1692022638
@@ -4074,63 +4075,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1784402580}
   m_CullTransparentMesh: 1
---- !u!1001 &1792732132
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 96547968456600900, guid: 2a9d6ce1cb8ca494b9056a87b93e5222, type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 96547968456600900, guid: 2a9d6ce1cb8ca494b9056a87b93e5222, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 3.58
-      objectReference: {fileID: 0}
-    - target: {fileID: 96547968456600900, guid: 2a9d6ce1cb8ca494b9056a87b93e5222, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.06
-      objectReference: {fileID: 0}
-    - target: {fileID: 96547968456600900, guid: 2a9d6ce1cb8ca494b9056a87b93e5222, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 96547968456600900, guid: 2a9d6ce1cb8ca494b9056a87b93e5222, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 96547968456600900, guid: 2a9d6ce1cb8ca494b9056a87b93e5222, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 96547968456600900, guid: 2a9d6ce1cb8ca494b9056a87b93e5222, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 96547968456600900, guid: 2a9d6ce1cb8ca494b9056a87b93e5222, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 96547968456600900, guid: 2a9d6ce1cb8ca494b9056a87b93e5222, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 96547968456600900, guid: 2a9d6ce1cb8ca494b9056a87b93e5222, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 96547968456600900, guid: 2a9d6ce1cb8ca494b9056a87b93e5222, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6732500630012034354, guid: 2a9d6ce1cb8ca494b9056a87b93e5222, type: 3}
-      propertyPath: m_Name
-      value: GunnerBoss
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 2a9d6ce1cb8ca494b9056a87b93e5222, type: 3}
 --- !u!1 &1998938855
 GameObject:
   m_ObjectHideFlags: 0
@@ -4736,7 +4680,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 662d48f6ea5ff58439a2219ecaab33ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 300
   baseHealthRegen: 2
   healthRegen: 0
   deathParticle: {fileID: 8945874903322622280, guid: bbbc0d3ef4f9d0a4ab0e10ccc08c920d, type: 3}

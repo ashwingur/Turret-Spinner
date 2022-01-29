@@ -14,6 +14,7 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private Transform basicEnemy;
     [SerializeField] private Transform basicSniper;
     [SerializeField] private Transform basicBoss;
+    [SerializeField] private Transform gunnerBoss;
 
 
     // Start is called before the first frame update
@@ -32,9 +33,9 @@ public class EnemySpawner : MonoBehaviour
                 new WaveSpawnItem(basicSniper, 30)
             }, 
             new WaveSpawnItem[] {
-                new WaveSpawnItem(basicBoss, 1),
+                new WaveSpawnItem(gunnerBoss, 1),
             },
-            new int[] { 2, 5, 5, 5, 5 }, 3, 1.4);
+            new int[] { 1, 1 }, 1, 1.4);
         waves.Add(wave1);
 
         Wave wave2 = new(new WaveSpawnItem[] {
