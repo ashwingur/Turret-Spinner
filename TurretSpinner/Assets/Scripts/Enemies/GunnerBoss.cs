@@ -85,7 +85,6 @@ public class GunnerBoss : Enemy
 
         }
         currentAttackCooldown = 0.2f;
-        print("new mode is " + mode);
         currentModeTime = Random.Range(minimumModeTime, maximumModeTime);
     }
 

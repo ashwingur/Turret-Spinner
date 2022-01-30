@@ -1502,7 +1502,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &486941805
 GameObject:
@@ -1535,7 +1535,7 @@ Transform:
   - {fileID: 232403334}
   - {fileID: 111883650}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
 GameObject:
@@ -1620,7 +1620,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &519420033
 MonoBehaviour:
@@ -1815,7 +1815,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &576015626
 GameObject:
@@ -2344,7 +2344,7 @@ Transform:
   - {fileID: 836706421}
   - {fileID: 1604548073}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &806583910
 GameObject:
@@ -3308,7 +3308,7 @@ RectTransform:
   - {fileID: 294085075}
   - {fileID: 772884745}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3828,7 +3828,7 @@ Transform:
   - {fileID: 5575043705076239887}
   - {fileID: 269819558}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1692022637
 MonoBehaviour:
@@ -4748,6 +4748,99 @@ Transform:
   m_Father: {fileID: 1692022636}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &4133547660338758712
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4133547660640135973, guid: e8381e0704ef5c04d87c3384ed6383e4, type: 3}
+      propertyPath: m_Name
+      value: AudioManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133547660640135974, guid: e8381e0704ef5c04d87c3384ed6383e4, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133547660640135974, guid: e8381e0704ef5c04d87c3384ed6383e4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.37593254
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133547660640135974, guid: e8381e0704ef5c04d87c3384ed6383e4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.22494721
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133547660640135974, guid: e8381e0704ef5c04d87c3384ed6383e4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.06093613
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133547660640135974, guid: e8381e0704ef5c04d87c3384ed6383e4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133547660640135974, guid: e8381e0704ef5c04d87c3384ed6383e4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133547660640135974, guid: e8381e0704ef5c04d87c3384ed6383e4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133547660640135974, guid: e8381e0704ef5c04d87c3384ed6383e4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133547660640135974, guid: e8381e0704ef5c04d87c3384ed6383e4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133547660640135974, guid: e8381e0704ef5c04d87c3384ed6383e4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133547660640135974, guid: e8381e0704ef5c04d87c3384ed6383e4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133547660640135975, guid: e8381e0704ef5c04d87c3384ed6383e4, type: 3}
+      propertyPath: sounds.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133547660640135975, guid: e8381e0704ef5c04d87c3384ed6383e4, type: 3}
+      propertyPath: sounds.Array.data[0].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 5f6402bc89c006540bac4a4ec54aa8ca, type: 3}
+    - target: {fileID: 4133547660640135975, guid: e8381e0704ef5c04d87c3384ed6383e4, type: 3}
+      propertyPath: sounds.Array.data[0].loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133547660640135975, guid: e8381e0704ef5c04d87c3384ed6383e4, type: 3}
+      propertyPath: sounds.Array.data[0].name
+      value: PlayerShoot
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133547660640135975, guid: e8381e0704ef5c04d87c3384ed6383e4, type: 3}
+      propertyPath: sounds.Array.data[1].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 5fcbaf3082d060845a8393fcc4cb1cf6, type: 3}
+    - target: {fileID: 4133547660640135975, guid: e8381e0704ef5c04d87c3384ed6383e4, type: 3}
+      propertyPath: sounds.Array.data[1].loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133547660640135975, guid: e8381e0704ef5c04d87c3384ed6383e4, type: 3}
+      propertyPath: sounds.Array.data[1].name
+      value: Background
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133547660640135975, guid: e8381e0704ef5c04d87c3384ed6383e4, type: 3}
+      propertyPath: sounds.Array.data[1].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133547660640135975, guid: e8381e0704ef5c04d87c3384ed6383e4, type: 3}
+      propertyPath: sounds.Array.data[1].volume
+      value: 0.804
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e8381e0704ef5c04d87c3384ed6383e4, type: 3}
 --- !u!4 &5575043705076239887
 Transform:
   m_ObjectHideFlags: 0

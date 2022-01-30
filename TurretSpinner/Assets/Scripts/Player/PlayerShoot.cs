@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-
 public class PlayerShoot : MonoBehaviour
 {
     [Header("Prefabs")]
@@ -18,6 +17,7 @@ public class PlayerShoot : MonoBehaviour
     [SerializeField] private int maxGunCount;
     [SerializeField] private int playerScore;
     private HUD hud;
+    private AudioManager audioManager;
     private float currentBulletCooldown = 0;
     private int gunCount = 1;
 
@@ -28,6 +28,7 @@ public class PlayerShoot : MonoBehaviour
 
     private void Start()
     {
+        audioManager = FindObjectOfType<AudioManager>();
         upgradedShootingCooldown = baseShootingCooldown;
         hud = canvas.GetComponent<HUD>();
         hud.SetMaxRocketCooldown(rocketShootingCooldown);
@@ -51,6 +52,7 @@ public class PlayerShoot : MonoBehaviour
         {
             if (currentBulletCooldown <= 0)
             {
+                audioManager.Play("PlayerShoot");
                 for (int i = 0; i < gunCount; i++)
                 {
                     Instantiate(bullet, transform.GetChild(i).position, transform.GetChild(i).rotation);
