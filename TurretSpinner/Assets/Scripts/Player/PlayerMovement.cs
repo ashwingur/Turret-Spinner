@@ -6,7 +6,6 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private float playerSpeed;
     [SerializeField] private float playerSpeedUpgrade;
-    [SerializeField] private CameraFollow cameraFollow;
     public static float horizontalBorder = 10f;
     public static float verticalBorder = 7.6f;
 
@@ -19,7 +18,6 @@ public class PlayerMovement : MonoBehaviour
             Translate();
             Rotate();
         }
-        cameraFollow.SetPosition(transform);
     }
 
     void Rotate()
