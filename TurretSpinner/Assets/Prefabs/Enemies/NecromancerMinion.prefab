@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: -3261885929397076554}
   - component: {fileID: 8733036023093796391}
   m_Layer: 6
-  m_Name: BasicEnemy
+  m_Name: NecromancerMinion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -194,7 +194,7 @@ SpriteRenderer:
   m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 2747690628134850419, guid: b670ab75dde984907b8570040daa08c5, type: 3}
-  m_Color: {r: 0.764151, g: 0.10453011, b: 0.10453011, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -268,11 +268,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d666b8c1e2dd4104a9b7a9900483eda1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 3.5
   separationSpeed: 2
-  separationDistance: 0.2
-  maxHealth: 15
-  damage: 5
+  separationDistance: 2
+  maxHealth: 25
+  damage: 10
   killReward: 1
   killScore: 3
   deathParticles: {fileID: 8945874903322622280, guid: 10410f62bd6a79d44971b33721e8b579, type: 3}

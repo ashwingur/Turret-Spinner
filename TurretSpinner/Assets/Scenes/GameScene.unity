@@ -2321,6 +2321,7 @@ MonoBehaviour:
   basicSniper: {fileID: 2374059598885380961, guid: d1a7e00e8df6007428775f2257ab8dd0, type: 3}
   basicBoss: {fileID: 96547968456600900, guid: 80f0bfa3a1cd9aa40b1ad59f62252174, type: 3}
   gunnerBoss: {fileID: 96547968456600900, guid: 2a9d6ce1cb8ca494b9056a87b93e5222, type: 3}
+  necromancerBoss: {fileID: 96547968456600900, guid: c631e0ff61a9169478819567e8afb585, type: 3}
 --- !u!4 &789410690
 Transform:
   m_ObjectHideFlags: 0
@@ -4802,42 +4803,6 @@ PrefabInstance:
     - target: {fileID: 4133547660640135974, guid: e8381e0704ef5c04d87c3384ed6383e4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4133547660640135975, guid: e8381e0704ef5c04d87c3384ed6383e4, type: 3}
-      propertyPath: sounds.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4133547660640135975, guid: e8381e0704ef5c04d87c3384ed6383e4, type: 3}
-      propertyPath: sounds.Array.data[0].clip
-      value: 
-      objectReference: {fileID: 8300000, guid: 5f6402bc89c006540bac4a4ec54aa8ca, type: 3}
-    - target: {fileID: 4133547660640135975, guid: e8381e0704ef5c04d87c3384ed6383e4, type: 3}
-      propertyPath: sounds.Array.data[0].loop
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4133547660640135975, guid: e8381e0704ef5c04d87c3384ed6383e4, type: 3}
-      propertyPath: sounds.Array.data[0].name
-      value: PlayerShoot
-      objectReference: {fileID: 0}
-    - target: {fileID: 4133547660640135975, guid: e8381e0704ef5c04d87c3384ed6383e4, type: 3}
-      propertyPath: sounds.Array.data[1].clip
-      value: 
-      objectReference: {fileID: 8300000, guid: 5fcbaf3082d060845a8393fcc4cb1cf6, type: 3}
-    - target: {fileID: 4133547660640135975, guid: e8381e0704ef5c04d87c3384ed6383e4, type: 3}
-      propertyPath: sounds.Array.data[1].loop
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4133547660640135975, guid: e8381e0704ef5c04d87c3384ed6383e4, type: 3}
-      propertyPath: sounds.Array.data[1].name
-      value: Background
-      objectReference: {fileID: 0}
-    - target: {fileID: 4133547660640135975, guid: e8381e0704ef5c04d87c3384ed6383e4, type: 3}
-      propertyPath: sounds.Array.data[1].pitch
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4133547660640135975, guid: e8381e0704ef5c04d87c3384ed6383e4, type: 3}
-      propertyPath: sounds.Array.data[1].volume
-      value: 0.804
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e8381e0704ef5c04d87c3384ed6383e4, type: 3}

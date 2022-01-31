@@ -13,6 +13,8 @@ public class Enemy : MonoBehaviour
     [SerializeField] protected int killScore;
     [SerializeField] protected ParticleSystem deathParticles;
     [SerializeField] protected string message;
+    [SerializeField] protected string deathSound;
+    [SerializeField] protected bool isBoss;
     protected float currentHealth;
     protected GameObject player;
 
@@ -24,7 +26,7 @@ public class Enemy : MonoBehaviour
 
     protected virtual void Update()
     {
-        Move();
+        MoveToPlayer();
     }
 
     protected void UpdateRotation(Vector3 v)
@@ -38,7 +40,7 @@ public class Enemy : MonoBehaviour
         transform.rotation = Quaternion.Euler(0, 0, angle);
     }
 
-    protected virtual void Move()
+    protected virtual void MoveToPlayer()
     {
         Vector2 sum = Vector2.zero;
         int count = 0;
@@ -71,8 +73,17 @@ public class Enemy : MonoBehaviour
         {
             UpdateRotation(direction);
         }
+    }
 
-        
+    protected virtual void MoveToLocation(Vector3 point, bool facePoint)
+    {
+        Vector3 direction = Vector3.Normalize(point - transform.position);
+        transform.position += direction * speed * Time.deltaTime;
+
+        if (facePoint)
+        {
+            UpdateRotation(point);
+        }
     }
 
     protected void OnTriggerEnter2D(Collider2D collision)
@@ -88,6 +99,14 @@ public class Enemy : MonoBehaviour
     {
         player.GetComponent<PlayerShoot>().GetKillReward(killReward, killScore);
         Instantiate(deathParticles, transform.position, transform.rotation);
+        if (deathSound != "")
+        {
+            AudioManager.GetInstance().Play(deathSound);
+        }
+        if (isBoss)
+        {
+            GameObject.FindGameObjectWithTag("Spawner").GetComponent<EnemySpawner>().StartNextWave();
+        }
         Destroy(gameObject);
     }
 

@@ -362,5 +362,6 @@ MonoBehaviour:
   killScore: 5
   deathParticles: {fileID: 8945874903322622280, guid: 10410f62bd6a79d44971b33721e8b579, type: 3}
   message: 
+  deathSound: SmallBoom
   attackSpeedCooldown: 4
   bulletPrefab: {fileID: 4870541709149588971, guid: 3f40790872030f84e845adb3d0692227, type: 3}

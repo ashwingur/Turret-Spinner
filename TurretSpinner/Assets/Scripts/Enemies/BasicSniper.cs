@@ -16,11 +16,11 @@ public class BasicSniper : Enemy
 
     protected override void Update()
     {
-        Move();
+        MoveToPlayer();
         Shoot();
     }
 
-    protected override void Move()
+    protected override void MoveToPlayer()
     {
         Vector2 sum = Vector2.zero;
         int count = 0;

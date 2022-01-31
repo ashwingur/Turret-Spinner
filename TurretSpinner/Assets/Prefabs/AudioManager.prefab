@@ -51,3 +51,27 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: 5fcbaf3082d060845a8393fcc4cb1cf6, type: 3}
+    name: Background
+    volume: 0.534
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: 2c50ac712347d33429993e45e0be84a3, type: 3}
+    name: SmallBoom
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: 344d5d02d16d3a749b36ade64499981c, type: 3}
+    name: Missile
+    volume: 1
+    pitch: 0.88
+    loop: 0
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: a993374554cfe3b45943bb1469aedaff, type: 3}
+    name: Minigun
+    volume: 0.381
+    pitch: 1.33
+    loop: 0
+    source: {fileID: 0}

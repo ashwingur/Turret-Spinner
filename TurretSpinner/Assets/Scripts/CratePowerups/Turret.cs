@@ -32,6 +32,7 @@ public class Turret : MonoBehaviour
         currentAttackCooldown -= Time.deltaTime;
         if (currentAttackCooldown <= 0)
         {
+            AudioManager.GetInstance().Play("Minigun");
             Transform gun = transform.GetChild(1).GetChild(0);
             Instantiate(bulletPrefab, gun.position, gun.rotation);
             currentAttackCooldown = attackCooldown;

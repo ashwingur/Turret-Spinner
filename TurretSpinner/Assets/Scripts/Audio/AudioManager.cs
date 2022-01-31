@@ -7,8 +7,9 @@ public class AudioManager : MonoBehaviour
     [SerializeField]
     private Sound[] sounds;
 
-    public static AudioManager instance;
-    
+    private static AudioManager instance;
+    public static AudioManager GetInstance() => instance;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -34,6 +35,7 @@ public class AudioManager : MonoBehaviour
             s.source.loop = s.loop;
         }
     }
+
 
     void Start()
     {

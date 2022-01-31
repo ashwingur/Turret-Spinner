@@ -61,6 +61,7 @@ public class PlayerShoot : MonoBehaviour
             }
             if (currentRocketCooldown <= 0)
             {
+                audioManager.Play("Missile");
                 Instantiate(rocket, rocketHead.position, rocketHead.rotation);
                 currentRocketCooldown = rocketShootingCooldown;
             }
