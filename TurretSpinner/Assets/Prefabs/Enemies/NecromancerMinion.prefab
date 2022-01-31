@@ -273,8 +273,9 @@ MonoBehaviour:
   separationDistance: 2
   maxHealth: 25
   damage: 10
-  killReward: 1
-  killScore: 3
+  killReward: 0
+  killScore: 0
   deathParticles: {fileID: 8945874903322622280, guid: 10410f62bd6a79d44971b33721e8b579, type: 3}
   message: 
   deathSound: SmallBoom
+  isBoss: 0

@@ -278,7 +278,7 @@ MonoBehaviour:
   deathParticles: {fileID: 8945874903322622280, guid: 8ca3fc00dea8b9d4b877792305f9ddf7, type: 3}
   message: A necromancer has shimmered into existence!
   deathSound: 
-  isBoss: 0
+  isBoss: 1
   idleRotationSpeed: 50
   summonAmount: 3
   maxIdleTime: 3

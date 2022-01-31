@@ -503,6 +503,8 @@ MonoBehaviour:
   killScore: 30
   deathParticles: {fileID: 8945874903322622280, guid: 8ca3fc00dea8b9d4b877792305f9ddf7, type: 3}
   message: A big chungus gunner has entered!
+  deathSound: 
+  isBoss: 1
   smallBulletCooldown: 0.1
   largeBulletCooldown: 1.5
   smallBulletPrefab: {fileID: 4870541709149588971, guid: 49ca1ed21fef8aa4d9cff72f559c2f07, type: 3}
