@@ -44,12 +44,6 @@ public class BasicBoss : Enemy
             FacePlayer();
         }
     }
-
-    protected override void Die()
-    {
-        GameObject.FindGameObjectWithTag("Spawner").GetComponent<EnemySpawner>().StartNextWave();
-        base.Die();
-    }
 }
 
 enum BasicBossMode

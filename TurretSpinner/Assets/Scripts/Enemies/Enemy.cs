@@ -105,6 +105,7 @@ public class Enemy : MonoBehaviour
         }
         if (isBoss)
         {
+            print("Boss died, calling next wave");
             GameObject.FindGameObjectWithTag("Spawner").GetComponent<EnemySpawner>().StartNextWave();
         }
         Destroy(gameObject);
@@ -127,6 +128,7 @@ public class Enemy : MonoBehaviour
         if (currentHealth <= 0)
         {
             Die();
+            return;
         }
         transform.GetChild(0).transform.localScale =
             new Vector3(currentHealth / maxHealth, 1, 0);

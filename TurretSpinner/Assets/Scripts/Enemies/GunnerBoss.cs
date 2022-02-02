@@ -117,13 +117,6 @@ public class GunnerBoss : Enemy
 
     }
 
-    protected override void Die()
-    {
-        GameObject.FindGameObjectWithTag("Spawner").GetComponent<EnemySpawner>().StartNextWave();
-        base.Die();
-    }
-
-
 }
 
 enum GunnerBossMode
