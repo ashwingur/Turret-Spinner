@@ -18,6 +18,9 @@ public class Enemy : MonoBehaviour
     protected float currentHealth;
     protected GameObject player;
 
+    // For testing purposes
+    private int testDeath = 0;
+
     protected virtual void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -103,6 +106,11 @@ public class Enemy : MonoBehaviour
 
     protected virtual void Die()
     {
+        testDeath += 1;
+        if (testDeath >= 2)
+        {
+            Debug.LogWarning("Warning! test death was " + testDeath);
+        }
         player.GetComponent<PlayerShoot>().GetKillReward(killReward, killScore);
         Instantiate(deathParticles, transform.position, transform.rotation);
         if (deathSound != "")

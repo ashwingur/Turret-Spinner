@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1832821645844599231}
   m_LocalRotation: {x: 0, y: -0, z: 0.7071068, w: -0.7071068}
-  m_LocalPosition: {x: 0.489, y: 0, z: 0}
+  m_LocalPosition: {x: 1.26, y: 0, z: 0}
   m_LocalScale: {x: 0.1804464, y: 0.375948, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -108,7 +108,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2506887038944953437}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.40000057, y: 0.046000004, z: 0}
+  m_LocalPosition: {x: -0.40000057, y: 1.02, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -141,8 +141,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4125783837419671829}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.4, y: 0.5, z: 0}
-  m_LocalScale: {x: 0.8, y: 0.1, z: 1}
+  m_LocalPosition: {x: -0.07, y: 0.5, z: 0}
+  m_LocalScale: {x: 1.7, y: 0.22, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8329327280563640858}
@@ -229,7 +229,7 @@ Transform:
   m_GameObject: {fileID: 8992561296679023383}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.3163085, y: -1.0545745, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8329327280563640858}
@@ -278,8 +278,8 @@ SpriteRenderer:
   m_SortingLayerID: 1570696817
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 2747690628134850419, guid: b670ab75dde984907b8570040daa08c5, type: 3}
-  m_Color: {r: 0.5283019, g: 0.042363837, b: 0.042363837, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 41a7af6e012490442938e0f33fa3b7e0, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -306,7 +306,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 0.8828125}
+    oldSize: {x: 3.5, y: 2.4}
     newSize: {x: 1, y: 0.8828125}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -314,12 +314,31 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.25, y: 0.43359375}
-      - {x: -0.5, y: 0}
-      - {x: -0.25, y: -0.43359375}
-      - {x: 0.25, y: -0.43359375}
-      - {x: 0.5, y: 0}
-      - {x: 0.25, y: 0.43359375}
+    - - {x: 1.26, y: -0.34}
+      - {x: 1.29, y: -0.22999999}
+      - {x: 1.66, y: -0.24}
+      - {x: 1.75, y: -0.14999999}
+      - {x: 1.75, y: 0.12}
+      - {x: 1.65, y: 0.22}
+      - {x: 1.25, y: 0.32}
+      - {x: 0.88, y: 0.52}
+      - {x: 0.78999996, y: 0.71}
+      - {x: 0.71, y: 0.93}
+      - {x: 0.48, y: 1.15}
+      - {x: 0.38, y: 1.1999999}
+      - {x: -1.28, y: 1.1999999}
+      - {x: -1.4, y: 1.12}
+      - {x: -1.61, y: 0.93}
+      - {x: -1.75, y: 0.53999996}
+      - {x: -1.75, y: -0.53999996}
+      - {x: -1.6899999, y: -0.71}
+      - {x: -1.5899999, y: -0.90999997}
+      - {x: -1.39, y: -1.11}
+      - {x: -1.28, y: -1.1999999}
+      - {x: 0.37, y: -1.1999999}
+      - {x: 0.66999996, y: -0.90999997}
+      - {x: 0.87, y: -0.5}
+      - {x: 0.87, y: -0.32}
 --- !u!50 &8295119766054400915
 Rigidbody2D:
   serializedVersion: 4
@@ -363,5 +382,6 @@ MonoBehaviour:
   deathParticles: {fileID: 8945874903322622280, guid: 10410f62bd6a79d44971b33721e8b579, type: 3}
   message: 
   deathSound: SmallBoom
+  isBoss: 0
   attackSpeedCooldown: 4
   bulletPrefab: {fileID: 4870541709149588971, guid: 3f40790872030f84e845adb3d0692227, type: 3}
