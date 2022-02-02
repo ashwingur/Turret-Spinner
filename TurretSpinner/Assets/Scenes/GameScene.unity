@@ -6983,7 +6983,7 @@ MonoBehaviour:
   rocket: {fileID: 3287885033040159800, guid: c9334063c56e37e4f96a0a5378aebe59, type: 3}
   rocketHead: {fileID: 269819558}
   baseShootingCooldown: 0.8
-  rocketShootingCooldown: 2
+  rocketShootingCooldown: 4
   canvas: {fileID: 1408735328}
   maxGunCount: 8
   playerScore: 0

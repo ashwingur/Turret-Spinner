@@ -42,6 +42,12 @@ public class Enemy : MonoBehaviour
 
     protected virtual void MoveToPlayer()
     {
+        // Dont want to move completely on top of player
+        if (Vector3.Distance(transform.position, player.transform.position) < 0.5)
+        {
+            return;
+        }
+
         Vector2 sum = Vector2.zero;
         int count = 0;
 
