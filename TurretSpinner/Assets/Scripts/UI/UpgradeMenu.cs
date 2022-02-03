@@ -33,7 +33,7 @@ public class UpgradeMenu : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E) && !GameOver.GameIsOver)
         {
             if (UpgradeMenuOpen)
             {
@@ -44,6 +44,7 @@ public class UpgradeMenu : MonoBehaviour
             }
         } else if (Input.GetKeyDown(KeyCode.Escape))
         {
+            GameOver.GameIsOver = false;
             SceneManager.LoadScene("StartMenu");
         }
     }
