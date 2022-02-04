@@ -10,6 +10,7 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] private float healthRegen;
     [SerializeField] private ParticleSystem deathParticle;
     [SerializeField] private HUD hud;
+    [SerializeField] private GameObject gameOverPanel;
     private float healthRegenLevel = 0;
     private float currentHealth;
 
@@ -85,13 +86,13 @@ public class PlayerHealth : MonoBehaviour
         Instantiate(deathParticle, transform.position, transform.rotation);
         Time.timeScale = 0.1f;
         gameObject.SetActive(false);
-        Invoke("GoToStartMenu", 0.5f);
+        Invoke("ShowGameOverScreen", 0.3f);
     }
 
-    private void GoToStartMenu()
+    private void ShowGameOverScreen()
     {
-        SceneManager.LoadScene("StartMenu");
-        Time.timeScale = 1;
+        gameOverPanel.SetActive(true);
+        gameOverPanel.GetComponent<GameOver>().SetGameOverScreen();
     }
 
 

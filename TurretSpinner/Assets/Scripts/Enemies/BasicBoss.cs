@@ -16,6 +16,7 @@ public class BasicBoss : Enemy
         mode = BasicBossMode.Charging;
         currentModeTime = chargeTime;
         chargeDirection = Vector3.Normalize(player.transform.position - transform.position);
+        FacePlayer();
     }
 
     protected override void Update()

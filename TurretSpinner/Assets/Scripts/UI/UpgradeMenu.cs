@@ -11,6 +11,7 @@ public class UpgradeMenu : MonoBehaviour
     public static bool UpgradeMenuOpen = false;
     [SerializeField] private GameObject upgradeMenuUI;
     [SerializeField] private TextMeshProUGUI balanceText;
+    [SerializeField] private GameOver gameOver;
     [SerializeField] private GameObject player;
     private int currentBalance = 100;
 
@@ -33,7 +34,7 @@ public class UpgradeMenu : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && !GameOver.GameIsOver)
+        if (Input.GetKeyDown(KeyCode.E) && !gameOver.gameOver)
         {
             if (UpgradeMenuOpen)
             {
@@ -44,7 +45,6 @@ public class UpgradeMenu : MonoBehaviour
             }
         } else if (Input.GetKeyDown(KeyCode.Escape))
         {
-            GameOver.GameIsOver = false;
             SceneManager.LoadScene("StartMenu");
         }
     }

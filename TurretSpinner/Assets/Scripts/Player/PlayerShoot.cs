@@ -102,4 +102,6 @@ public class PlayerShoot : MonoBehaviour
         playerScore += scoreAmount;
         hud.UpdateScore(playerScore);
     }
+
+    public int GetScore() => playerScore;
 }
