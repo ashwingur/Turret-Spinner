@@ -6,8 +6,8 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private float playerSpeed;
     [SerializeField] private float playerSpeedUpgrade;
-    public static float horizontalBorder = 10f;
-    public static float verticalBorder = 7.6f;
+    public static float horizontalBorder = 12f;
+    public static float verticalBorder = 9f;
 
 
     // Update is called once per frame

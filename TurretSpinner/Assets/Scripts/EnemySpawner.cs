@@ -8,8 +8,10 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private int currentWave;
     [SerializeField] private HUD hud;
     [SerializeField] private float bossTextDisplayTime;
+    [SerializeField] private float minSpawnDistance;
     private List<Wave> waves;
     private int spawnpointCount;
+    private Transform player;
 
     [Header("Enemy Prefabs")]
     [SerializeField] private Transform basicEnemy;
@@ -23,6 +25,7 @@ public class EnemySpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player").transform;
         spawnpointCount = transform.childCount;
         InitialiseWaves();
         StartCoroutine(StartWave(currentWave));
@@ -79,27 +82,6 @@ public class EnemySpawner : MonoBehaviour
         {
             waves.Add(new(minions2, bosses, delays1, spawnAmounts[i], spawnGrowths[i]));
         }
-
-
-        //Wave wave1 = new(new WaveSpawnItem[] {
-        //        new WaveSpawnItem(basicEnemy, 70),
-        //        new WaveSpawnItem(basicSniper, 30)
-        //    }, 
-        //    new WaveSpawnItem[] {
-        //        new WaveSpawnItem(necromancerBoss, 1),
-        //    },
-        //    new int[] { 1, 1 }, 1, 1.4);
-        //waves.Add(wave1);
-
-        //Wave wave2 = new(new WaveSpawnItem[] {
-        //        new WaveSpawnItem(basicEnemy, 10),
-        //        new WaveSpawnItem(basicSniper, 90)
-        //    },
-        //    new WaveSpawnItem[] {
-        //        new WaveSpawnItem(necromancerBoss, 1),
-        //    },
-        //    new int[] { 3, 10, 10, 10 }, 5, 1.5);
-        //waves.Add(wave2);
     }
 
     IEnumerator StartWave(int waveIndex)
@@ -124,20 +106,17 @@ public class EnemySpawner : MonoBehaviour
             if (i == length - 1)
             {
                 // Spawn a boss since we're at the end of the wave
-                int random = Random.Range(0, spawnpointCount - 1);
-                Transform spawnpoint = transform.GetChild(random);
+                Transform spawnpoint = GetRandomSpawnPoint();
                 Transform boss = wave.GetRandomBoss();
                 Instantiate(boss, spawnpoint.position, spawnpoint.rotation);
                 hud.ShowBossText(boss.GetComponent<Enemy>().GetMessage(), bossTextDisplayTime);
-                print(string.Format("Wave {0}.{1}, spawning a boss", waveIndex, i));
             }
             else
             {
                 // Spawn minions
                 for (int j = 0; j < wave.GetSpawnAmount(i); j++)
                 {
-                    int random = Random.Range(0, spawnpointCount - 1);
-                    Transform spawnpoint = transform.GetChild(random);
+                    Transform spawnpoint = GetRandomSpawnPoint();
                     Instantiate(wave.getRandomMinion(), spawnpoint.position, spawnpoint.rotation);
                 }
             }
@@ -148,12 +127,27 @@ public class EnemySpawner : MonoBehaviour
 
     public void StartNextWave()
     {
-        print("Start next wave called");
         StackTrace stackTrace = new StackTrace();
         // Get calling method name
         print(stackTrace.GetFrame(1).GetMethod().Name);
         currentWave++;
         StartCoroutine(StartWave(currentWave));
+    }
+
+    private Transform GetRandomSpawnPoint()
+    {
+        // Get a random spawn point that is not near the player
+        // To prevent an enemy spawning on top of the player
+        int random = Random.Range(0, spawnpointCount - 1);
+        Transform spawnpoint = transform.GetChild(random);
+
+        if (minSpawnDistance >= Vector3.Distance(player.position, spawnpoint.position))
+        {
+            // Spawnpoint unsuitable, find another
+            return GetRandomSpawnPoint();
+        }
+        else
+            return spawnpoint;
     }
 }
 
