@@ -24,6 +24,7 @@ public class PlayerHealth : MonoBehaviour
     {
         if (currentHealth <= 0)
         {
+            hud.UpdateHealthBar(0, maxHealth);
             Die();
         } else
         {
