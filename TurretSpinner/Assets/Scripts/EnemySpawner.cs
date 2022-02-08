@@ -48,13 +48,13 @@ public class EnemySpawner : MonoBehaviour
         }
 
         // Array of delays
-        int[] delays1 = new int[] { 5, 5, 5 };
+        int[] delays1 = new int[] { 5, 5 };
 
         // WaveSpawnItem array of bosses
         WaveSpawnItem[] bosses = new WaveSpawnItem[] {
                 new WaveSpawnItem(basicBoss, 2),
                 new WaveSpawnItem(gunnerBoss, 2),
-                new WaveSpawnItem(necromancerBoss, 1),
+                new WaveSpawnItem(necromancerBoss, 100),
         };
 
         // WaveSpawnItem array of basic enemies

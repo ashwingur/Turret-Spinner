@@ -24,6 +24,7 @@ public class Enemy : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player");
         currentHealth = maxHealth;
+        FacePlayer();
     }
 
     protected virtual void Update()
@@ -113,7 +114,6 @@ public class Enemy : MonoBehaviour
         }
         if (isBoss)
         {
-            print("Boss died, calling next wave");
             GameObject.FindGameObjectWithTag("Spawner").GetComponent<EnemySpawner>().StartNextWave();
         }
         Destroy(gameObject);
