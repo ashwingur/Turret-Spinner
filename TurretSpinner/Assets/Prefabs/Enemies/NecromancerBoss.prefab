@@ -237,7 +237,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39545d7364aa1a4438a9fcf06d709e06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
+  speed: 3
   separationSpeed: 2
   separationDistance: 1
   maxHealth: 250
@@ -248,10 +248,10 @@ MonoBehaviour:
   message: A mothership has shimmered into existence!
   deathSound: 
   isBoss: 1
-  idleRotationSpeed: 50
+  idleRotationSpeed: 70
   summonAmount: 3
   maxIdleTime: 3
-  minIdleTime: 1
+  minIdleTime: 2
   minionPrefab: {fileID: 96547968456600900, guid: 8615cf6a138d63c428b3cbc6e388563e, type: 3}
 --- !u!58 &2987212145428449859
 CircleCollider2D:

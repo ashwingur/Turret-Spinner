@@ -13,7 +13,7 @@ public class UpgradeMenu : MonoBehaviour
     [SerializeField] private TextMeshProUGUI balanceText;
     [SerializeField] private GameOver gameOver;
     [SerializeField] private GameObject player;
-    private int currentBalance = 100;
+    private int currentBalance = 0;
 
     [SerializeField] private Upgrade moreGunsUpgrade;
     [SerializeField] private Upgrade healthRegenUpgrade;
