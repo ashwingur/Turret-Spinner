@@ -17,9 +17,8 @@ public class Enemy : MonoBehaviour
     [SerializeField] protected bool isBoss;
     protected float currentHealth;
     protected GameObject player;
-
-    // For testing purposes
-    private int testDeath = 0;
+    // Don't want die to be called multiple times
+    private bool isDead = false;
 
     protected virtual void Start()
     {
@@ -106,11 +105,6 @@ public class Enemy : MonoBehaviour
 
     protected virtual void Die()
     {
-        testDeath += 1;
-        if (testDeath >= 2)
-        {
-            Debug.LogWarning("Warning! test death was " + testDeath);
-        }
         player.GetComponent<PlayerShoot>().GetKillReward(killReward, killScore);
         Instantiate(deathParticles, transform.position, transform.rotation);
         if (deathSound != "")
@@ -141,7 +135,11 @@ public class Enemy : MonoBehaviour
         currentHealth -= damage;
         if (currentHealth <= 0)
         {
-            Die();
+            if (!isDead)
+            {
+                isDead = true;
+                Die();
+            }            
             return;
         }
         transform.GetChild(0).transform.localScale =

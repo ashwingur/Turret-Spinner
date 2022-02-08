@@ -14,7 +14,7 @@ public class TurretItem : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            powerupManager.GetComponent<PowerupManager>().BasicTurret();
+            powerupManager.GetComponent<PowerupManager>().PickupRandomTurret();
             Destroy(gameObject);
         }
     }

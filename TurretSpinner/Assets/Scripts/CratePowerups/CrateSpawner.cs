@@ -4,8 +4,14 @@ using UnityEngine;
 
 public class CrateSpawner : MonoBehaviour
 {
-    [SerializeField] private float invokeRepeatTime;
-    [SerializeField] private float spawnStartTime;
+    [Header("Crate Spawn Timings")]
+    [SerializeField] private float minSpawnStartTime;
+    [SerializeField] private float maxSpawnStartTime;
+    [SerializeField] private float repeatMinTime;
+    [SerializeField] private float repeatMaxTime;
+    [SerializeField] private float turretRepeatMinTime;
+    [SerializeField] private float turretRepeatMaxTime;
+    [Header("Crate Prefabs")]
     [SerializeField] private Transform healthPackPrefab;
     [SerializeField] private Transform turretItemPrefab;
     private float xBorder;
@@ -16,24 +22,26 @@ public class CrateSpawner : MonoBehaviour
     {
         xBorder = PlayerMovement.horizontalBorder - 1;
         yBorder = PlayerMovement.verticalBorder - 1;
-        InvokeRepeating("SpawnCrate", spawnStartTime, invokeRepeatTime);
-        InvokeRepeating("SpawnTurret", spawnStartTime, invokeRepeatTime);
+        Invoke("SpawnHealthPack", Random.Range(minSpawnStartTime, maxSpawnStartTime));
+        Invoke("SpawnTurret", Random.Range(minSpawnStartTime, maxSpawnStartTime));
     }
 
 
-    void SpawnCrate()
+    private void SpawnHealthPack()
     {
         float x = Random.Range(-xBorder, xBorder);
         float y = Random.Range(-yBorder, yBorder);
 
         Instantiate(healthPackPrefab, new Vector3(x, y, 0), Quaternion.Euler(0, 0, 0));
+        Invoke("SpawnHealthPack", Random.Range(repeatMinTime, repeatMaxTime));
     }
 
-    void SpawnTurret()
+    private void SpawnTurret()
     {
         float x = Random.Range(-xBorder, xBorder);
         float y = Random.Range(-yBorder, yBorder);
 
         Instantiate(turretItemPrefab, new Vector3(x, y, 0), Quaternion.Euler(0, 0, 0));
+        Invoke("SpawnTurret", Random.Range(turretRepeatMinTime, turretRepeatMaxTime));
     }
 }

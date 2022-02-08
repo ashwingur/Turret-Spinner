@@ -5,29 +5,29 @@ using UnityEngine;
 public class Turret : MonoBehaviour
 {
 
-    [SerializeField] private float lifetime;
-    [SerializeField] private float attackCooldown;
-    [SerializeField] private float range;
-    [SerializeField] private Transform bulletPrefab;
-    private float currentLife;
-    private float currentAttackCooldown;
-    private Transform currentTarget;
+    [SerializeField] protected float lifetime;
+    [SerializeField] protected float attackCooldown;
+    [SerializeField] protected float range;
+    [SerializeField] protected Transform bulletPrefab;
+    protected float currentLife;
+    protected float currentAttackCooldown;
+    protected Transform currentTarget;
 
     // Start is called before the first frame update
-    void Start()
+    protected virtual void Start()
     {
         currentLife = lifetime;
         currentAttackCooldown = 0;
     }
 
     // Update is called once per frame
-    void Update()
+    protected virtual void Update()
     {
         UpdateLife();
         TargetClosestEnemy();
     }
 
-    void Shoot()
+    protected virtual void Shoot()
     {
         currentAttackCooldown -= Time.deltaTime;
         if (currentAttackCooldown <= 0)
@@ -39,9 +39,12 @@ public class Turret : MonoBehaviour
         }
     }
 
-    void TargetClosestEnemy()
+    protected virtual void TargetClosestEnemy()
     {
-        if (currentTarget == null || !currentTarget.gameObject.activeSelf)
+        // Also change target if it goes out of range
+        if (currentTarget == null 
+            || !currentTarget.gameObject.activeSelf
+            || Vector3.Distance(currentTarget.transform.position, transform.position) > range)
         {
             // Find the closest game object within the Enemy layer and range
             Collider2D collider = Physics2D.OverlapCircle(transform.position, range, LayerMask.GetMask("Enemy"));

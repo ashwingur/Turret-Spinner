@@ -16,6 +16,13 @@ public class PowerupManager : MonoBehaviour
         player.GetComponent<PlayerHealth>().HealthPack(healthPackRestorePercentage);
     }
 
+    public void PickupRandomTurret()
+    {
+        // Starting the random from 1 because the first enum variant is None
+        player.GetComponent<PlayerInventory>().SetCurrentTurret(TurretType.Shotgun);
+        //player.GetComponent<PlayerInventory>().SetCurrentTurret((TurretType)Random.Range(1, 2));
+    }
+
     public void BasicTurret()
     {
         player.GetComponent<PlayerInventory>().SetCurrentTurret(TurretType.Basic);

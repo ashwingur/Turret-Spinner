@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerInventory : MonoBehaviour
 {
     [SerializeField] private Transform basicTurret;
+    [SerializeField] private Transform shotgunTurret;
     [SerializeField] private GameObject turretHudIcon;
     private TurretType currentTurret;
 
@@ -21,9 +22,12 @@ public class PlayerInventory : MonoBehaviour
             {
                 case TurretType.Basic:
                     Instantiate(basicTurret, transform.position, Quaternion.Euler(new Vector2(0, 0)));
-                    currentTurret = TurretType.None;
+                    break;
+                case TurretType.Shotgun:
+                    Instantiate(shotgunTurret, transform.position, Quaternion.Euler(new Vector2(0, 0)));
                     break;
             }
+            currentTurret = TurretType.None;
             turretHudIcon.SetActive(false);
         }
     }
@@ -38,5 +42,6 @@ public class PlayerInventory : MonoBehaviour
 public enum TurretType
 {
     None,
-    Basic
+    Basic,
+    Shotgun,
 }
